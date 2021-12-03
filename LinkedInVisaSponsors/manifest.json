@@ -1,0 +1,19 @@
+{
+    "name": "Getting Started Example",
+    "description": "Build an Extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+		  "js": ["background.js"],
+		  "matches": ["*://*.linkedin.com/*"],
+		  "run_at": "document_idle"		  
+        }
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["data/visaSponsors.json", "assets/sponsor-icon.svg"],
+			"matches": ["*://*.linkedin.com/*"]
+		}
+	]
+}
