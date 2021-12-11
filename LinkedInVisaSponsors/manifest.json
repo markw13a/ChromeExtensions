@@ -4,11 +4,16 @@
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [
-        {
-		  "js": ["background.js"],
-		  "matches": ["*://*.linkedin.com/*"],
-		  "run_at": "document_idle"		  
-        }
+			{
+				"js": ["jobsSearchPages.js"],
+				"matches": ["*://*.linkedin.com/jobs/", "*://*.linkedin.com/jobs/search*", "*://*.linkedin.com/jobs/collections*"],
+				"run_at": "document_idle"		  
+			},
+			{
+				"js": ["jobsViewPage.js"],
+				"matches": ["*://*.linkedin.com/jobs/view/*"],
+				"run_at": "document_idle"		  
+			}
 	],
 	"web_accessible_resources": [
 		{
