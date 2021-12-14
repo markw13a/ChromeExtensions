@@ -14,7 +14,7 @@ setInterval(() => {
     const jobContainers = Array.from(document.querySelectorAll(jobContainerSelector));
     const sponsors = jobContainers.reduce((arr, jobContainer) => {
         const container = jobContainer.querySelector(".job-card-container__company-name");
-        const companyName = container?.textContent?.trim();
+        const companyName = container?.textContent?.trim()?.toLowerCase();
         const isCompanyAVisaSponsor = !!visaSponsors.find(sponsor => sponsor.includes(companyName));
 
         if (isCompanyAVisaSponsor) {

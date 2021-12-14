@@ -9,7 +9,7 @@ const loadVisaSponsor = async () => {
 loadVisaSponsor();
 
 setInterval(() => {
-    const companyName = document.querySelector(".jobs-unified-top-card__subtitle-primary-grouping a")?.textContent?.trim();
+    const companyName = document.querySelector(".jobs-unified-top-card__subtitle-primary-grouping a")?.textContent?.trim()?.toLowerCase();
     const isCompanyAVisaSponsor = !!visaSponsors.find(sponsor => sponsor.includes(companyName));
 
     if (!isCompanyAVisaSponsor) {
